@@ -1,35 +1,29 @@
 document.addEventListener('DOMContentLoaded', () =>{
-    // Select DOM Element
+    
 const input = document.getElementById('todo-input')
 const todobtn = document.getElementById('todo-btn')
 const list = document.getElementById('todo-list')
 
-// ek array jaha per task store hoga 
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-tasks.forEach(task => renderTask(task)) // isse kyahoga like page refresh hone ke baad dom ke local storage se inpute data render main store hoga one by one 
-
-//ab task kaise add hoga wo after click 
+tasks.forEach(task => renderTask(task))
 
 todobtn.addEventListener('click', () => {
-    // agar user ne inpute ke time space add kiya toh usko kaise hataye ?
-
-    const tasktrim = input.value.trim() // trim faltu ke space ko trim kar denga 
-
-    if (tasktrim==="") return; // agar user ne kuch inpute nhi likha hai or button per click kar raa ahai toh kuch nhi perform hoga 
-
-    // after writting any inpute
+   
+    const tasktrim = input.value.trim()
+    if (tasktrim==="") return; 
+   
     const newtask = {
-        id : Date.now() /*unique id*/ ,
-        text : tasktrim /*inpute ka task store*/ ,
+        id : Date.now(),
+        text : tasktrim ,
         complete : false,
     };
 
     tasks.push(newtask);
     saveTask();
     renderTask(newtask)
-    input.value = "";//clear inpute
+    input.value = "";
     console.log(tasks);
 });
 
