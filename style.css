@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center; /* fix */
+    align-items: center;
+    min-height: 100vh;
+
+    background-image: url(https://thumbs.dreamstime.com/b/work-schedule-deadline-planning-concept-white-sign-black-text-placed-calendar-page-focus-time-406675907.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* fix */
+}
+
+.header{
+   border-radius: 20px;
+   padding: 30px;
+
+   background: rgba(255, 255, 255, 0.2); /* transparent glass */
+   backdrop-filter: blur(10px); /* blur effect */
+   -webkit-backdrop-filter: blur(10px); /* safari support */
+
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+   width: 350px;
+}
+h1{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#todo-input{
+    padding: 10px;
+    border-radius: 8px;
+    border-color: none;
+}
+
+#todo-btn{
+    padding: 10px;
+    border-radius: 8px;
+    border-color: none;
+}
+
+#todo-list{
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+#todo-list li{
+    background: white;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+#todo-list li:hover{
+    transform: scale(1.02);
+}
+
+#todo-list span{
+    flex: 1;
+}
+
+#todo-list button{
+    background: red;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#todo-list button:hover{
+    background: darkred;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
