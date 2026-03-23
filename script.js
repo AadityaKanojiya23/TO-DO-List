@@ -54,7 +54,6 @@ function renderTask(task){
 
 
 function saveTask(){
-    localStorage.setItem("tasks" , JSON.stringify(tasks))  // isse ab data ya inpute localhost main bhi save hoga console ke saat jisse refresh ke baad nhi inpute wahi rahenga 
-    // setItem main key "string" + value bhi string hona chahye per we have task as array isliye JSON.stringify use kiya 
+    localStorage.setItem("tasks" , JSON.stringify(tasks))  
 }
 })
